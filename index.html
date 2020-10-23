@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Taller I multimedia - condicionales</title>
+
+</head>
+
+<body>
+
+<script>
+/*
+Nombres: ARIANNA ZAPATEIRO & GUISEL MAZO
+Ficha: 1438082
+
+El examen consta de 11 preguntas, 7 teóricas y 4 prácticas, para aprobarlo debe de sacar como mínimo 7 de 10. Las respuestas de las preguntas prácticas las debe ingresar dentro de los comentarios despues de la palabra "RESPUESTA". Puede habilitarlos o desabilitarlos para verificar sus respuestas. Recuerde volver a habilitar los comentarios para no generar errores en el código.
+
+PUNTO 1: Especifique con que etiqueta de html se comienza a programar en Javascript:
+RESPUESTA 1: <script> < /script>
+
+PUNTO 2: Escriba con sus propias palabras que es un condicional
+RESPUESTA 2: 
+
+Un condicional es un enunciado que sirve como alternativa para controlar la ejecución de lo que queremos que aparezca o no. 
+
+PUNTO 3: Escriba por lo menos 4 operadores logicos que se usen en las codicionales y que significa cada uno : 
+RESPUESTA 3: 
+
+== Si es igual
+=== Si es estrictamente igual
+&& (y)Se tienen que cumplir las dos condiciones
+|| (o) Se puede cumplir una o la otra condición
+!= Si es diferente
+!== Si es estrictamente diferente
+> mayor que
+< menor que
+>= mayor o igual que
+<= menor o igual que
+
+
+
+
+PUNTO 4: Dentro de que etiquetas se puede utilizar la etiqueta <script>: 
+RESPUESTA 4: 
+
+Se puede utilizar dentro de  <head> y <body>
+
+PUNTO 5: Especifique a que tipo de variable (numero, cadena, booleana) pertenecen los siguientes valores: 
+89, "70", 5.2, "booleana", "edificio"
+RESPUESTA 5: 
+
+ 89 = VARIABLE TIPO NUMÉRICO
+ "70" = VARIABLE TIPO STRING
+ 5.2 = VARIABLE TIPO FLOAT
+ "booleana" = VARIABLE TIPO STRING
+ "edificio" = VARIABLE TIPO STRING
+
+
+PUNTO 6: Escriba 3 errores que no se deben cometer a la hora de nombrar nuestras variables: 
+RESPUESTA 6: 
+
+- NO PUEDEN COLOCARSE CON ESPACIOS
+- NO SE PUEDEN COLOCAR NUMEROS AL PRINCIPIO
+- NO ADMITE CARÁCTERES ESPECIALES
+
+
+PUNTO 7: Describa la diferencia para las siguientes estructuras:  if, else,else if.
+RESPUESTA 7: 
+
+IF = sirve para condicionar si pasa algo.
+ELSE = sirve para condicionar lo que en IF no se cumple.
+ELSE IF = sirven para establecer una segunda condición o múltiples, si no se cumplen ni IF ni ELSE.
+
+*/
+
+//----------------------------------------------------------------------
+//PUNTO 1: Genere los 3 tipos de variables básicos vistos hasta el momento, concatenelos e imprimalos en un alert
+//RESPUESTA 1: 
+
+	var personajeFav = "SuperGirl";
+	var animalFav = "Perro";
+	var colorFav = "Azul";
+
+	alert(personajeFav+"\n"+animalFav+"\n"+colorFav);
+
+//----------------------------------------------------------------------
+/*PUNTO 2: -Con ayuda de la función prompt pedir dos datos al usuario:
+Nombre, edad para luego imprimir en pantalla el siguiente resultado.
+
+- Si el usuario tiene edad de 18 o mayor puede ingresar a la discoteca.
+- Si el usuario es menor de 18 no puede ingresar a la discoteca.
+- Si el usuario se ingreso a la discoteca y se llama Pepe, puede ingresar a zona VIP, de lo contrario no*/
+//RESPUESTA 2: 
+
+	var nombreU = prompt ("Ingrese su nombre de usuario")
+	var edadU = prompt ("Ingrese su edad")
+
+	if (edadU >= 18) {
+
+		alert ("BIENVENIDO A LA DISCO")
+	}
+
+	else if (nombreU == "Pepe"){
+
+		alert ("BIENVENIDO. PUEDES INGRESAR A LA ZONA VIP")
+	}
+
+	else {
+
+		alert ("ACCESO DENEGADO. SOLO PARA MAYORES DE EDAD")
+	}
+
+
+//----------------------------------------------------------------------
+/*PUNTO 3: Pedirle al usuario que digite el nombre y despues una contraseña, si el usuario es: admin  y la contraseña: 123 pedirle dos numeros y luego sacarlos en una alerta multiplicados 
+
+En caso contrario imprimirle que no puede ingresar al sistema
+*/
+//RESPUESTA 3: 
+
+	var nombreUsu = prompt ("Digite su nombre de usuario");
+	var contra = prompt ("Digite contraseña");
+
+	if(nombreUsu == "admin" && contra == "123"){
+
+		var n1 = prompt("Digite un número");
+		var n2 = prompt("Digite otro número");
+			alert (n1*n2)
+	} else{ 
+
+		alert ("ACCESO DENEGADO")
+	}
+
+
+
+//----------------------------------------------------------------------
+/*PUNTO 4: Una persona desea pagar las matrículas de sus 3 hijos. Solitar el valor de la matricula del hijo 1 , del hijo 2 y del hijo 3
+
+
+Si la suma de las matriculas dan menos de 3000000 imprimirle que se gana un descuento del 10%
+
+Si no si la suma de las matriculas dan mayor o igual de 3000000 pero menos de 5000000 imprimirle que se gana un descuento del 20%
+
+Por ultimo Si  la suma de las matriculas dan mayor o igual de 5000000 imprimirle que se gana un descuento del 30%
+
+   */ 
+//RESPUESTA 4:  
+
+	var mHijo1 = prompt ("Digite el valor de la matricula de su primer hijo");
+	var mHijo2 = prompt ("Digite el valor de la matricula de su segundo hijo");
+	var mHijo3 = prompt ("Digite el valor de la matricula de su tercer hijo");
+
+	var resultado = mHijo1+mHijo2+mHijo3;
+
+	if (resultado < 3000000) {
+		
+		alert("Tienes un descuento del 10%")
+	}
+
+	else if (resultado >= 3000000 && resultado < 5000000) {
+		
+		alert("Tienes un descuento del 20%")
+	}
+
+	else if (resultado >= 5000000){
+		
+		alert("Tienes un descuento del 30%")
+	}
+
+	else{}
+
+</script>
+</body>
+</html>
